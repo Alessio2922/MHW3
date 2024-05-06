@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Home - Nirvana</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap" rel="stylesheet">
+  <script src="mhw3.js" defer></script>
+  <link rel="stylesheet" href="mhw3.css">
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- Testata all"apertura del sito web -->
+  <header id="headerSlide" class="slide1">
+    <div class="overlay"></div>
+    <nav id="contenitore">
+      <div>
+        <img id="logo-home" src="mhw3-img/nirvana-logo.png">
+      </div>
+      <div>
+        <a class="button"> Music </a>
+        <a class="button"> Videos </a>
+        <a class="button"> Merch </a>
+        <a class="button"> Mailing List </a>
+      </div>
+      <!-- Menù a tendina -->
+      <div class="burger" onclick="toggleButtons()">
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sezione per la discografia -->
+  <section class="new-contenitore">
+    <div>
+      <strong> DISCOGRAPHY </strong>
+    </div>
+    <nav>
+      <a class="new-button"> SEE ALL </a>
+    </nav>
+  </section>
+
+  <section class="gallery">
+    <div class="row">
+      <div class="cella"> <img src="mhw3-img/nevermind.jpg" alt="img1"> </div>
+      <div class="cella"> <img src="mhw3-img/bleach.jpg" alt="img2"> </div>
+      <div class="cella"> <img src="mhw3-img/unplugged.jpg" alt="img3"> </div>
+      <div class="cella"> <img src="mhw3-img/inutero.jpg" alt="img4"> </div>
+    </div>
+    <div class="row">
+      <div class="cella"> <img src="mhw3-img/inutero.jpg" alt="img5"> </div>
+      <div class="cella"> <img src="mhw3-img/unplugged.jpg" alt="img6"> </div>
+      <div class="cella"> <img src="mhw3-img/bleach.jpg" alt="img7"> </div>
+      <div class="cella"> <img src="mhw3-img/nevermind.jpg" alt="img8"> </div>
+    </div>
+  </section>
+
+  <!-- Sezione per il merchandising -->
+  <section class="new-contenitore">
+    <div>
+      <strong> MERCH </strong>
+    </div>
+    <nav>
+      <a class="new-button"> SEE ALL </a>
+    </nav>
+  </section>
+
+  <!-- Immagini di esempio per l"acquisto di prodotti dal merch -->
+  <section id="album-view">
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+  <section id="modal-view" class="hidden-modal"></section>
+
+  <!-- Sezione video -->
+  <section class="new-contenitore">
+    <div>
+      <strong> VIDEOS </strong>
+    </div>
+    <nav>
+      <a class="new-button"> SEE ALL </a>
+    </nav>
+  </section>
+
+  <!-- Video canzone -->
+  <div class="video-dim">
+    <video controls autoplay muted>
+      <source src="mhw3-img/transition1.mp4">
+    </video>
+  </div>
+
+  <!-- Mailing List -->
+  <section class="new-contenitore">
+    <div>
+      <strong> MAILING LIST </strong>
+    </div>
+  </section>
+
+  <!-- Footer e mailing list -->
+  <footer id="footer-data" data-hidden="true">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Nirvana</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, beatae iusto animi quos quae quasi
+          provident minus? Beatae, incidunt aspernatur labore omnis rem magni at ab. Enim sequi non temporibus?</p>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: info@nirvana.com</p>
+        <p>Phone: +1 123-456-7890</p>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Nirvana. All rights reserved.
+    </div>
+  </footer>
+
+  <button id="vedi-altro">Vedi altro</button>
+
+  <!-- API Spotify -->
+  <h1>Ricerca Album Nirvana</h1>
+  <form id="search-formAPI">
+    <label for="albumAPI"></label>
+    <input type="textAPI" id="albumAPI" name="albumAPI" required>
+    <button type="submit">Cerca</button>
+  </form>
+  <div id="album-viewAPI"></div>
+
+  <!-- API The Guardian -->
+  <h1>Ultimi articoli dal The Guardian su Nirvana</h1>
+
+  <div id="article-container">
+    <button id="read-more-button">Leggi altri articoli</button>
+  </div>
+
+</body>
+
+</html>
